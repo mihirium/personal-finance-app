@@ -1,0 +1,28 @@
+{
+  "name": "personal-finances-backend",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch src/server.js",
+    "start": "node src/server.js",
+    "test": "node --test",
+    "db:up": "docker compose up -d db",
+    "db:down": "docker compose down",
+    "db:migrate": "node scripts/migrate-local-db.js",
+    "db:import:supabase": "node scripts/import-supabase.js",
+    "db:seed:demo": "node scripts/seed-demo-data.js",
+    "check:env": "node scripts/check-env.js",
+    "smoke:user": "node scripts/smoke-user.js",
+    "smoke:link": "node scripts/smoke-link-token.js",
+    "smoke:purchases": "node scripts/smoke-purchase-history.js"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.112.4",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "pg": "^8.23.1",
+    "plaid": "^35.0.0"
+  }
+}

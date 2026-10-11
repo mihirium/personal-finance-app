@@ -1,0 +1,22 @@
+.DS_Store
+
+# Node
+node_modules/
+npm-debug.log*
+
+# Local environment
+.env
+backend/.env
+
+# Xcode local build output
+DerivedData/
+.build/
+*.xcuserstate
+xcuserdata/
+personal-finances.xcodeproj/xcuserdata/
+
+# Swift Package Manager
+.swiftpm/
+
+# Local editor files
+.vscode/

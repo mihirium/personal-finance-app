@@ -1,0 +1,21 @@
+services:
+  db:
+    image: postgres:16-alpine
+    container_name: personal-finances-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: personal_finances
+      POSTGRES_USER: personal_finances
+      POSTGRES_PASSWORD: personal_finances
+    ports:
+      - "5432:5432"
+    volumes:
+      - personal_finances_postgres:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U personal_finances -d personal_finances"]
+      interval: 2s
+      timeout: 5s
+      retries: 15
+
+volumes:
+  personal_finances_postgres:

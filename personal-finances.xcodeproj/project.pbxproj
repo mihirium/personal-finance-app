@@ -6,6 +6,11 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		20CFB4CA3045F0010024C8CE /* LinkKit in Frameworks */ = {isa = PBXBuildFile; productRef = 20CFB4C93045F0010024C8CE /* LinkKit */; };
+		A1000000000000000000000B /* BudgetWidget.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = A10000000000000000000001 /* BudgetWidget.appex */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		20CFB48930438EB60024C8CE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -21,12 +26,34 @@
 			remoteGlobalIDString = 20CFB47830438EB50024C8CE;
 			remoteInfo = "personal-finances";
 		};
+		A1000000000000000000000C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 20CFB47130438EB50024C8CE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A10000000000000000000003;
+			remoteInfo = BudgetWidget;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A1000000000000000000000A /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				A1000000000000000000000B /* BudgetWidget.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		20CFB47930438EB50024C8CE /* personal-finances.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "personal-finances.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		20CFB48830438EB60024C8CE /* personal-financesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "personal-financesTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		20CFB49230438EB60024C8CE /* personal-financesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "personal-financesUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A10000000000000000000001 /* BudgetWidget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = BudgetWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -45,6 +72,11 @@
 			path = "personal-financesUITests";
 			sourceTree = "<group>";
 		};
+		A10000000000000000000002 /* BudgetWidget */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = BudgetWidget;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20CFB4CA3045F0010024C8CE /* LinkKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,6 +102,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A10000000000000000000005 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -76,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				20CFB47B30438EB50024C8CE /* personal-finances */,
+				A10000000000000000000002 /* BudgetWidget */,
 				20CFB48B30438EB60024C8CE /* personal-financesTests */,
 				20CFB49530438EB60024C8CE /* personal-financesUITests */,
 				20CFB47A30438EB50024C8CE /* Products */,
@@ -88,6 +129,7 @@
 				20CFB47930438EB50024C8CE /* personal-finances.app */,
 				20CFB48830438EB60024C8CE /* personal-financesTests.xctest */,
 				20CFB49230438EB60024C8CE /* personal-financesUITests.xctest */,
+				A10000000000000000000001 /* BudgetWidget.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -102,16 +144,19 @@
 				20CFB47530438EB50024C8CE /* Sources */,
 				20CFB47630438EB50024C8CE /* Frameworks */,
 				20CFB47730438EB50024C8CE /* Resources */,
+				A1000000000000000000000A /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				A1000000000000000000000D /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				20CFB47B30438EB50024C8CE /* personal-finances */,
 			);
 			name = "personal-finances";
 			packageProductDependencies = (
+				20CFB4C93045F0010024C8CE /* LinkKit */,
 			);
 			productName = "personal-finances";
 			productReference = 20CFB47930438EB50024C8CE /* personal-finances.app */;
@@ -163,6 +208,28 @@
 			productReference = 20CFB49230438EB60024C8CE /* personal-financesUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		A10000000000000000000003 /* BudgetWidget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A10000000000000000000007 /* Build configuration list for PBXNativeTarget "BudgetWidget" */;
+			buildPhases = (
+				A10000000000000000000004 /* Sources */,
+				A10000000000000000000005 /* Frameworks */,
+				A10000000000000000000006 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				A10000000000000000000002 /* BudgetWidget */,
+			);
+			name = BudgetWidget;
+			packageProductDependencies = (
+			);
+			productName = BudgetWidget;
+			productReference = A10000000000000000000001 /* BudgetWidget.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -170,6 +237,9 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
+				KnownAssetTags = (
+					New,
+				);
 				LastSwiftUpdateCheck = 1640;
 				LastUpgradeCheck = 1640;
 				TargetAttributes = {
@@ -184,6 +254,9 @@
 						CreatedOnToolsVersion = 16.4;
 						TestTargetID = 20CFB47830438EB50024C8CE;
 					};
+					A10000000000000000000003 = {
+						CreatedOnToolsVersion = 16.4;
+					};
 				};
 			};
 			buildConfigurationList = 20CFB47430438EB50024C8CE /* Build configuration list for PBXProject "personal-finances" */;
@@ -195,6 +268,9 @@
 			);
 			mainGroup = 20CFB47030438EB50024C8CE;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				20CFB4BC3044A3360024C8CE /* XCRemoteSwiftPackageReference "plaid-link-ios-spm" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 20CFB47A30438EB50024C8CE /* Products */;
 			projectDirPath = "";
@@ -203,6 +279,7 @@
 				20CFB47830438EB50024C8CE /* personal-finances */,
 				20CFB48730438EB60024C8CE /* personal-financesTests */,
 				20CFB49130438EB60024C8CE /* personal-financesUITests */,
+				A10000000000000000000003 /* BudgetWidget */,
 			);
 		};
 /* End PBXProject section */
@@ -223,6 +300,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		20CFB49030438EB60024C8CE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A10000000000000000000006 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -253,6 +337,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A10000000000000000000004 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -265,6 +356,11 @@
 			isa = PBXTargetDependency;
 			target = 20CFB47830438EB50024C8CE /* personal-finances */;
 			targetProxy = 20CFB49330438EB60024C8CE /* PBXContainerItemProxy */;
+		};
+		A1000000000000000000000D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A10000000000000000000003 /* BudgetWidget */;
+			targetProxy = A1000000000000000000000C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -395,6 +491,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "personal-finances/personal-finances.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = VWEHYK5NBG;
@@ -403,8 +500,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -423,6 +520,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "personal-finances/personal-finances.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = VWEHYK5NBG;
@@ -431,8 +529,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -518,6 +616,58 @@
 			};
 			name = Release;
 		};
+		A10000000000000000000008 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_ENTITLEMENTS = BudgetWidget/BudgetWidget.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = VWEHYK5NBG;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "BudgetWidget-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "mihirsangam.personal-finances.BudgetWidget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A10000000000000000000009 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_ENTITLEMENTS = BudgetWidget/BudgetWidget.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = VWEHYK5NBG;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "BudgetWidget-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "mihirsangam.personal-finances.BudgetWidget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -557,7 +707,35 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		A10000000000000000000007 /* Build configuration list for PBXNativeTarget "BudgetWidget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A10000000000000000000008 /* Debug */,
+				A10000000000000000000009 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		20CFB4BC3044A3360024C8CE /* XCRemoteSwiftPackageReference "plaid-link-ios-spm" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/plaid/plaid-link-ios-spm";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		20CFB4C93045F0010024C8CE /* LinkKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 20CFB4BC3044A3360024C8CE /* XCRemoteSwiftPackageReference "plaid-link-ios-spm" */;
+			productName = LinkKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 20CFB47130438EB50024C8CE /* Project object */;
 }

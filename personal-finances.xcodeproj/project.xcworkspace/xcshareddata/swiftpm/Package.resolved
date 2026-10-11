@@ -1,0 +1,15 @@
+{
+  "originHash" : "58620475b326837784365601e24dfb547c7df2220c710fff8023a611cf5c1944",
+  "pins" : [
+    {
+      "identity" : "plaid-link-ios-spm",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/plaid/plaid-link-ios-spm",
+      "state" : {
+        "revision" : "4956b2c7450e05dd180ad68cd3ad5fb74b43a319",
+        "version" : "7.1.0"
+      }
+    }
+  ],
+  "version" : 3
+}
